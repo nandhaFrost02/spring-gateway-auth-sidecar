@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: microservice_rest_api
+            uri: http://localhost:8000
+            predicates:
+              - Path=/**
